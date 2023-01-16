@@ -78,21 +78,48 @@ export const {
     },
   },
   utils: {
-    marginX: (value: Stitches.PropertyValue<"margin">) => ({
-      marginLeft: value,
-      marginRight: value,
-    }),
-    marginY: (value: Stitches.PropertyValue<"margin">) => ({
-      marginTop: value,
-      marginBottom: value,
-    }),
-    paddingX: (value: Stitches.PropertyValue<"padding">) => ({
+    px: (value: Stitches.PropertyValue<"padding">) => ({
       paddingLeft: value,
       paddingRight: value,
     }),
-    paddingY: (value: Stitches.PropertyValue<"padding">) => ({
+    py: (value: Stitches.PropertyValue<"padding">) => ({
       paddingTop: value,
       paddingBottom: value,
+    }),
+    // Abbreviated margin properties
+    m: (value: Stitches.PropertyValue<"margin">) => ({
+      margin: value,
+    }),
+    mt: (value: Stitches.PropertyValue<"margin">) => ({
+      marginTop: value,
+    }),
+    mr: (value: Stitches.PropertyValue<"margin">) => ({
+      marginRight: value,
+    }),
+    mb: (value: Stitches.PropertyValue<"margin">) => ({
+      marginBottom: value,
+    }),
+    ml: (value: Stitches.PropertyValue<"margin">) => ({
+      marginLeft: value,
+    }),
+    mx: (value: Stitches.PropertyValue<"margin">) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value: Stitches.PropertyValue<"margin">) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
+
+    // A property for applying width/height together
+    size: (value: Stitches.PropertyValue<"width">) => ({
+      width: value,
+      height: value,
+    }),
+
+    // An abbreviated property for border-radius
+    br: (value: Stitches.PropertyValue<"borderRadius">) => ({
+      borderRadius: value,
     }),
   },
   media: {
