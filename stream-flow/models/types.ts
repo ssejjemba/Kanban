@@ -21,3 +21,9 @@ export interface SomeCallback<TArgs, TResult = void> {
 export interface CallbackSetter<TArgs> {
   (nextCallback: SomeCallback<TArgs>): void;
 }
+
+export interface Noop {
+  noop: true;
+
+  (): void;
+}
