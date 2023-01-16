@@ -1,5 +1,5 @@
-import type * as Stitches from '@stitches/react'
-import { createStitches } from '@stitches/react'
+import type * as Stitches from "@stitches/react";
+import { createStitches } from "@stitches/react";
 
 export const {
   config,
@@ -12,71 +12,91 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      hiContrast: 'hsl(206,10%,5%)',
-      loContrast: 'white',
+      hiContrast: "hsl(206,10%,5%)",
+      loContrast: "white",
 
-      gray100: 'hsl(206,22%,99%)',
-      gray200: 'hsl(206,12%,97%)',
-      gray300: 'hsl(206,11%,92%)',
-      gray400: 'hsl(206,10%,84%)',
-      gray500: 'hsl(206,10%,76%)',
-      gray600: 'hsl(206,10%,44%)',
+      white: "hsl(0, 0%, 100%)",
+      offWhite: "hsl(221, 69%, 94%)",
 
-      purple100: 'hsl(252,100%,99%)',
-      purple200: 'hsl(252,100%,98%)',
-      purple300: 'hsl(252,100%,94%)',
-      purple400: 'hsl(252,75%,84%)',
-      purple500: 'hsl(252,78%,60%)',
-      purple600: 'hsl(252,80%,53%)',
+      gray100: "hsl(220,69%,97%)",
+      gray200: "hsl(216,15%,57%)",
+      gray300: "hsl(236,11%,27%)",
+      gray400: "hsl(235,12%,19%)",
+      gray500: "hsl(235,16%,15%)",
+      gray600: "hsl(237,100%,4%)",
+
+      purple500: "hsl(243,100%,82%)",
+      purple600: "hsl(242,48%,58%)",
+
+      red100: "hsl(0, 100%, 80%)",
+      red200: "hsl(0, 78%, 63%)",
+
+      // aliases as used in figma
+      black: "$gray600",
+      veryDarkGrey: "$grey500",
+      darkGrey: "$grey400",
+      darkLines: "$grey300",
+      mediumGrey: "$grey200",
+      lightGrey: "$grey100",
+      lightLines: "$offWhite",
+      mainPurple: "$purple600",
+      mainPurpleHover: "$purple500",
+      red: "$red200",
+      redHover: "$red100",
     },
     space: {
-      1: '5px',
-      2: '10px',
-      3: '15px',
-      4: '20px',
-      5: '25px',
-      6: '35px',
+      1: "4px",
+      2: "8px",
+      3: "16px",
+      4: "20px",
+      5: "24px",
+      6: "32px",
     },
     sizes: {
-      1: '5px',
-      2: '10px',
-      3: '15px',
-      4: '20px',
-      5: '25px',
-      6: '35px',
+      1: "16px",
+      2: "20px",
+      3: "40px",
+      4: "44px",
+      5: "48px",
+      6: "96px",
     },
     fontSizes: {
-      1: '12px',
-      2: '13px',
-      3: '15px',
-      4: '17px',
-      5: '19px',
-      6: '21px',
+      1: "12px",
+      2: "13px",
+      3: "15px",
+      4: "18px",
+      5: "24px",
+    },
+    lineHeights: {
+      1: "15px",
+      2: "19px",
+      3: "23px",
+      4: "30px",
     },
     fonts: {
-      system: 'system-ui',
+      system: "system-ui",
     },
   },
   utils: {
-    marginX: (value: Stitches.PropertyValue<'margin'>) => ({
+    marginX: (value: Stitches.PropertyValue<"margin">) => ({
       marginLeft: value,
       marginRight: value,
     }),
-    marginY: (value: Stitches.PropertyValue<'margin'>) => ({
+    marginY: (value: Stitches.PropertyValue<"margin">) => ({
       marginTop: value,
       marginBottom: value,
     }),
-    paddingX: (value: Stitches.PropertyValue<'padding'>) => ({
+    paddingX: (value: Stitches.PropertyValue<"padding">) => ({
       paddingLeft: value,
       paddingRight: value,
     }),
-    paddingY: (value: Stitches.PropertyValue<'padding'>) => ({
+    paddingY: (value: Stitches.PropertyValue<"padding">) => ({
       paddingTop: value,
       paddingBottom: value,
     }),
   },
   media: {
-    bp1: '(min-width: 520px)',
-    bp2: '(min-width: 900px)',
+    bp1: "(min-width: 520px)",
+    bp2: "(min-width: 900px)",
   },
-})
+});
