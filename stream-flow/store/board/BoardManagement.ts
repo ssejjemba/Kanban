@@ -1,7 +1,20 @@
 import { Board } from "../../models/data";
+import uuid from "uuid";
 
 export class BoardManager {
   private boards: Board[] = []; // an array to store the boards
+
+  createBoard(name: string, options: Partial<Board> = {}): Board {
+    return {
+      id: uuid.v1(),
+      name,
+      columns: [],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      description: "",
+      ...options,
+    };
+  }
 
   // Method to add a new board
   addBoard(board: Board) {
