@@ -20,3 +20,18 @@ export interface NodeData {
   actualTime: number; // The actual time taken to complete the item
   isArchived: boolean; // Indicates whether the item is archived or not
 }
+
+export interface Board {
+  id: string; // A unique identifier for the board
+  name: string; // The name of the board
+  description: string; // A brief description of the board
+  columns: Column[]; // An array of columns that make up the board
+  createdAt: Date; // The date the board was created
+  updatedAt: Date; // The date the board was last updated
+}
+
+export interface Column {
+  id: string; // A unique identifier for the column
+  name: string; // The name of the column
+  cardIds: string[]; // An array of ids of cards that belong to the column
+}
